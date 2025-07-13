@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <h2>
+        Create an Array to store companies -> "Bloomberg", "microsoft", "Uber", "Google", "IBM", "Netflix".
+    </h2>
+    <h3> Remove the first company from the array</h3>
+    <h3>Remove Uber and Ola in its place</h3>
+    <h3>Add amazon at the end</h3>
+</body>
+<script>
+    let companies = ["Bloomberg", "microsoft", "Uber", "Google", "IBM", "Netflix"];
+    console.log(companies);
+
+    console.log("Remove the first company from the array")
+    companies.shift();
+    console.log(companies);
+
+    let companies1 = ["Bloomberg", "microsoft", "Uber", "Google", "IBM", "Netflix"];
+
+    console.log("Remove Uber and ADD Ola in its place")
+    companies1.splice(2, 1, "Ola");
+    console.log(companies1);
+
+    //The opertation is getting performed on the 2nd array that has been updated by the 1st operation (shift)
+
+    console.log("Add amazon at the end")
+    companies.push("Amazon");
+    console.log(companies);
+
+    //The opertation is getting performed on the 3rd array that has been updated by the 2nd operation (splice)
+
+
+</script>
+
+</html>
