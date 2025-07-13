@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h2> Let's Learn functions.</h2>
+    <p>
+        <li>A JavaScript function is a block of code designed to perform a particular task.</li>
+        <li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+        <li>SYNTAX:
+            <pre>
+            function name(parameter1, parameter2, parameter3) {
+                // code to be executed
+              }
+
+              example: 
+              function sum(a, b) {
+                return a + b;
+              }
+        </pre>
+        </li>
+        <hr>
+    <pre><h2>Function Invocation</h2>
+            The code inside the function will execute when "something" invokes (calls) the function:
+            
+            When an event occurs (when a user clicks a button)
+            When it is invoked (called) from JavaScript code
+            Automatically (self invoked)
+        </pre>
+    <hr>
+
+    <pre><h2>Function Return</h2>
+            When JavaScript reaches a return statement, the function will stop executing.
+            
+            If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+            
+            Functions often compute a return value. The return value is "returned" back to the "caller":</pre>
+    </p>
+    <hr>
+
+    <h2>ARROW FUNCTION</h2>
+    <p> Arrow functions in JavaScript are a shorter and more modern way to write functions.</p>
+    <pre>
+        <h2>Basic Syntax</h2>
+            const sum = (a, b) => {
+            return a + b;
+            };
+    </pre>
+</body>
+<script>
+
+    function sum(a, b) {
+        return a + b;
+    }
+    console.log(sum(4, 6)); // This will output: 10
+
+    console.log('ARROw FUNCTION')
+
+    const arrowSum = (a, b) =>{
+        console.log(a + b);
+    }
+
+    arrowSum(4,7); // you can give this comand in the console directly. 
+
+</script>
+
+</html>

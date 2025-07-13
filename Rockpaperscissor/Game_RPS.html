@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .choices {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .choice {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .choice:hover {
+      transform: scale(1.1);
+    }
+
+    button {
+      width: 100px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: rgb(194, 142, 241);
+      border: 1px solid rgb(63, 21, 100);
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #444;
+    }
+
+    .scoreboard {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #666;
+    }
+
+    #msg {
+      margin-top: 20px;
+      background-color: #081b31;
+      color: #fff;
+      font-size: 2rem;
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <div class="choices">
+    <div class="choice" id="rock">
+      <button>Rock</button>
+    </div>
+    <div class="choice" id="paper">
+      <button>Paper</button>
+    </div>
+    <div class="choice" id="scissors">
+      <button>Scissors</button>
+    </div>
+  </div>
+
+  <div class="result" id="resultText">Make your move!</div>
+  <div class="scoreboard" id="scoreBoard">You: 0 | Computer: 0</div>
+  <div id="msg">Game Status</div>
+
+  <script>
+    let userScore = 0;
+    let compScore = 0;
+
+    const choices = document.querySelectorAll(".choice");
+    const resultText = document.getElementById("resultText");
+    const scoreBoard = document.getElementById("scoreBoard");
+    const msg = document.getElementById("msg");
+
+    const genCompChoice = () => {
+      const options = ["rock", "paper", "scissors"];
+      const randomInd = Math.floor(Math.random() * 3);
+      return options[randomInd];
+    };
+
+    const drawGame = () => {
+      console.log("Game was Draw!!");
+      msg.style.backgroundColor = "#081b31";
+      msg.textContent = "It's a draw!";
+    };
+
+    const userWin = () => {
+      console.log("You win this time!!!");
+      msg.style.backgroundColor = "green";
+      msg.textContent = "You Win!";
+    };
+
+    const compWin = () => {
+      console.log("You lost to computer!!");
+      msg.style.backgroundColor = "red";
+      msg.textContent = "You Lose!";
+    };
+
+    const playGame = (userChoice) => {
+      const compChoice = genCompChoice();
+      let result = "";
+
+      if (userChoice === compChoice) {
+        result = `It's a draw! You both chose ${userChoice}`;
+        drawGame();
+      } else if (
+        (userChoice === "rock" && compChoice === "scissors") ||
+        (userChoice === "paper" && compChoice === "rock") ||
+        (userChoice === "scissors" && compChoice === "paper")
+      ) {
+        userScore++;
+        result = `You win! ${userChoice} beats ${compChoice}`;
+        userWin();
+      } else {
+        compScore++;
+        result = `You lose! ${compChoice} beats ${userChoice}`;
+        compWin();
+      }
+
+      resultText.textContent = result;
+      scoreBoard.textContent = `You: ${userScore} | Computer: ${compScore}`;
+    };
+
+    choices.forEach(choice => {
+      choice.addEventListener("click", () => {
+        const userChoice = choice.getAttribute("id");
+        playGame(userChoice);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

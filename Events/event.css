@@ -1,0 +1,39 @@
+/* div {
+  height: 100px;
+  width: 150px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(142, 102, 180);
+  margin-top: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+body {
+
+  justify-content: center; 
+  align-items: center;  
+  margin-left: 600px;  
+}
+.container {
+  text-align: center;
+}
+button {
+  display: flex;
+  margin-top: 10px;
+  background-color: rgb(133, 93, 173);
+  height: 30px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+} */
+
+
+.container {
+  text-align: center;
+}

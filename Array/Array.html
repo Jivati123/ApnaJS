@@ -1,0 +1,56 @@
+[1:22 PM, 4/5/2025] Jivati: ARRAY:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+
+<body>
+    <p>
+    <h2> let's learn Array in JS</h2>
+    <ul>Array is a collection of similar kind of item. </ul>
+    <ul>It is used to store the miultiple values of the similar kind</ul>
+    <ul>It is internally an JS object, there is no type like array but when you check the type of any array it will turn
+        out to be an object</li><br>
+        <ul><b>>Why we do not use object and array:</b> </ul>
+        <ul>Object also also store the key value paid but you need to kcreate a key separately for each value which is
+            not a good practice. Now if array is also a kind of object but it inlcudes a indices and value pair amd you
+            do not need to give a name to each value.</ul>
+        <ul>IN JS STRINGS are IMMUTABLE but ARRAYS are MUTABLE - this means we can change the individual value at
+            particular position in an array without using any separate function</ul>
+        </p>
+
+</body>
+<script>
+    let fam = ["Jivati", "jamariya", "Vijay", "kanta"];
+    let marks = [76, 96, 84, 97, 45, 76];
+
+    console.log(fam);
+    console.log(marks);
+
+
+    console.log("IN JS STRINGS are IMMUTABLE but ARRAYS are MUTABLE - this means we can change the individual value at particular position in an array without using any separate function<")
+    marks[1] = 67;
+    console.log(marks);
+
+    console.log(`We can use the loops in our arrays, when we need to print the n number of items at the same time and we cannot write the console log individually to print each item. Here, we will use "array.length" as an stopping condition for the loop to run till the array's last element is reached`);
+    let fam1 = ["Jivati", "jamariya", "Vijay", "kanta"];
+    
+    for(i=0 ; i < fam1.length; i++){
+        console.log(fam1[i]);
+    }
+
+    console.log(`we can use the "for-of" or "for-in" loop as well to print the element of the array`);
+    let fam2 = ["Jivati", "jamariya", "Vijay", "kanta"];
+
+    for (let element of fam2){
+        console.log(element);
+        console.log(element.toUpperCase());
+    }
+
+</script>
+
+</html>

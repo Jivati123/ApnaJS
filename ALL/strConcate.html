@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate</title>
+</head>
+
+<body>
+    <h2> Learn concatenation</h2>
+
+    <p>
+        trim() only removes leading and trailing spaces.
+
+        replace(/\s+/g, '') removes all spaces in the string.
+        If you want to remove all spaces (including between words) from the user's input, you need to use replace(/\s+/g, '') instead of just trim().
+
+    </p>
+
+</body>
+<script>
+    let str1 = prompt("Enter your full name");
+    let str2 = "@";
+    let str3 = 123;
+
+    let newStr1 = str1.replace(/\s+/g, ''); // Remove all spaces
+
+    console.log(newStr1);
+
+    let result = str2.concat(newStr1, str3);
+    console.log(result);
+</script>
+
+</html>

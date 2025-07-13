@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHERITANCE</title>
+</head>
+
+<body>
+    <!-- <h2> INHERITANCE </h2>
+    <script>
+        class person {
+            constructor(){
+                this.species = "homo-sapiens"
+            }
+
+            eat(){
+                console.log("eat");
+            }
+
+            sleep(){
+                console.log("sleep")
+            }
+        }
+
+        let jivati = new person();
+
+        class doctor extends person {
+            work(){
+                console.log("work");
+            }
+        }
+    </script> -->
+
+
+    <h2> SUPER KEYWORD</h2>
+    <script>
+        class parent {
+            constructor(name) {
+                this.species = "homo sapiens";
+                this.name = name;
+            }
+            eat() {
+                console.log("eat");
+            }
+        }
+
+        class child extends parent {
+            constructor(name) {
+                super(name)
+            }
+
+            work(){
+                console.log("work hard!!");
+            }
+        }
+
+        let jiyaObj = new child("Jivati");
+    </script>
+</body>
+
+</html>

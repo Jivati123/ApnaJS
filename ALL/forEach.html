@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+<body>
+    <h2>For Each Loop</h2>
+    <p>
+        <li>forEach()  is only valid for the Arrays and not strings.</li>
+        <li>forEach() loop is called as a HOF (Higher Order Function / Method) </li>
+        <li>The forEach() method calls a function for each element in an array. </li>
+        <li>SO BASICALLY forEach () IS A FUNCTION WHICH USES ANY OTHER FUNCTION AS AN PARAMERER TO RETURNS A FUNCTION AS AN ARGUMENT. </li>
+        <LI><pre>
+            Syntax:
+            array.forEach(function(currentValue, index, arr), thisValue)
+        </pre>
+        </LI>
+        <LI><pre>
+            Example 1
+            Calls a function for each element in fruits:
+            
+            const fruits = ["apple", "orange", "cherry"];
+            fruits.forEach(myFunction);</pre></LI>
+    </p>
+</body>
+<script>
+    console.log('COMPUTE THE SUM');
+    let sum = 0;
+    let num = [5, 6, 7, 8, 9];
+    
+    num.forEach(myFunction);
+
+    function myFunction(i){
+    sum =sum + i;
+    console.log(sum);
+    }
+
+
+    console.log( 'PRINT THE SQUARES OF THE GIVEN NUMBER');
+    let number  = [3, 5, 7, 8];
+    number.forEach((i) =>{
+
+        console.log(i**2);
+    })
+
+    // console.log( 'PRINT THE SQUARES OF THE GIVEN NUMBER 2: ');
+
+    // let number = [3, 5, 7, 8];
+    // number.forEach(square);
+    // function square(i){
+    // console.log(i*i);
+    // }
+
+</script>
+</html>

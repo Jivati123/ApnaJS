@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+
+<body>
+    <h2>
+        <li>map() creates a new array from calling a function for every array element. </li>
+        <li>map() does not change the original array.</li>
+        <li>SYTax:
+            array.map(function(currentValue, index, arr), thisValue)
+        </li>
+        <li>EXAMPLE:
+            let arr = [2, 4, 5, 6];
+
+            arr.map((val) => {
+            console.log(val)
+            })
+        </li>
+    </h2>
+
+</body>
+<script>
+    let arr = [2, 4, 5, 6];
+    let newArray = arr.map((val) => {
+        return (val**2);
+    })
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element</title>
+</head>
+
+<body>
+    <h2>Writing into an HTML element, using innerHTML or innerText. </h2>
+    <p> Use the id attribute to identify the HTML element.
+        Then use the innerHTML property to change the HTML content of the HTML element:</p>
+
+    <P ID="demo"></P>
+
+    <P id="demo1">This text will change</P>
+    <button type="button" onclick='document.getElementById("demo1").innerHTML = "Hello javascript"'>CLICK ME</button>
+
+    <p id="demo2">Jivati Jamariya</p>
+    <button type="button" onclick='document.getElementById("demo2").innerHTML= "JJ"'>CLICK HERE</button>
+
+    <p id-="demo3">Change </p>
+    <button type="button" onclick='document.getElementById("demo3").innerHTML= "new Text"'>CLICK HERE</button>
+</body>
+<script>
+    document.getElementById('demo').innerHTML = 'Hello WORLD';
+</script>
+
+</html>
+

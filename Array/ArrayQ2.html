@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        For a given array with the prices of 5 items -> [250, 645, 300, 900, 50]. All items has an offer of 10% OFF on them. Change the array to store the final price after applying the offer.
+    </h2>
+</body>
+<script>
+    let items = [250, 645, 300, 900, 50];
+    // let discount = items- offer; 
+    // let offer = items - discount;
+
+    console.log(items);
+
+    for (let i = 0; i < items.length; i++) {
+        let offer = items[i] / 10;
+        console.log("Values of the items after offer at", i ,"is:", offer);
+
+        items[i] = items[i] - offer;
+    }
+
+    console.log(items);
+
+</script>
+
+</html>
