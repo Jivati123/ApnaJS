@@ -1,0 +1,15 @@
+body{
+    background-color: greenyellow;
+    font-size: 30px;
+    border: 1px solid rgb(198, 228, 153);
+    /* display: flex;
+    align-self: center;
+    justify-content: center; */
+    /* width: 1500px; */
+    /* height: 900px */
+}
+
+/* div{
+    width:400px;
+    height: 300px;
+} */
